@@ -25,11 +25,18 @@ with open(os.path.join(__dir__, 'ratingsystems', '__about__.py')) as f:
 
 setup(name='ratingsystems',
       version=about['__version__'],
-      license=about['__license__'],
+      # license=about['__license__'],
       description=about['__description__'],
-      long_description=__doc__,
       author=about['__author__'],
       author_email=about['__author_email__'],
       url=about['__url__'],
       packages=find_packages(where="./ratingsystems/"),
+      install_requires=[
+      'numpy>=2.0.0',
+      'scipy>=1.13.0',
+      'openskill>=6.0.0',
+      'pandas>=2.2.0',
+      'tqdm',
+      'trueskill>=0.4.0'
+      ]
      )
