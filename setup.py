@@ -37,6 +37,7 @@ setup(name='ratingsystems',
       'openskill>=6.0.0',
       'pandas>=2.2.0',
       'tqdm',
-      'trueskill>=0.4.0'
+      'trueskill>=0.4.0',
+      'sphinx-rtd-theme'
       ]
      )
