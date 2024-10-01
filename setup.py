@@ -34,7 +34,7 @@ setup(name='ratingsystems',
       install_requires=[
       'numpy>=2.0.0',
       'scipy>=1.13.0',
-      'openskill>=6.0.0',
+      'openskill',
       'pandas>=2.2.0',
       'tqdm',
       'trueskill>=0.4.0',
