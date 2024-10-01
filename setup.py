@@ -32,12 +32,11 @@ setup(name='ratingsystems',
       url=about['__url__'],
       packages=find_packages(where="./ratingsystems/"),
       install_requires=[
-      'numpy>=2.0.0',
-      'scipy>=1.13.0',
+      'numpy',
+      'scipy',
       'openskill',
-      'pandas>=2.2.0',
+      'pandas',
       'tqdm',
-      'trueskill>=0.4.0',
-      'sphinx-rtd-theme'
+      'trueskill',
       ]
      )

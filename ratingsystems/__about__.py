@@ -1,4 +1,4 @@
-__version__ = "0.1.0"
+__version__ = "0.1.2"
 __author__  = "Jayensee"
 __author_email__ = "jayensee.lol+ratingsystems@gmail.com"
 __url__ = "https://jayensee.github.io/"
