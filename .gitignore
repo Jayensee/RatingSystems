@@ -16,4 +16,3 @@ pip-log.txt
 
 # Sphinx
 docs/Makefile
-docs/_build

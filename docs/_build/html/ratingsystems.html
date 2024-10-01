@@ -1,0 +1,1102 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ratingsystems package &mdash; ratingsystems  documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=5929fcd5"></script>
+        <script src="_static/doctools.js?v=9a2dae69"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="ratingsystems" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            ratingsystems
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">ratingsystems</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">ratingsystems package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.Elo">ratingsystems.Elo module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Elo.Elo_Rating"><code class="docutils literal notranslate"><span class="pre">Elo_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Elo.Elo_System"><code class="docutils literal notranslate"><span class="pre">Elo_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.Glicko">ratingsystems.Glicko module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Glicko.Glicko_Rating"><code class="docutils literal notranslate"><span class="pre">Glicko_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Glicko.Glicko_System"><code class="docutils literal notranslate"><span class="pre">Glicko_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.Glicko2">ratingsystems.Glicko2 module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Glicko2.Glicko2_Rating"><code class="docutils literal notranslate"><span class="pre">Glicko2_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Glicko2.Glicko2_System"><code class="docutils literal notranslate"><span class="pre">Glicko2_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.JRS">ratingsystems.JRS module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.JRS.JRS_Rating"><code class="docutils literal notranslate"><span class="pre">JRS_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.JRS.JRS_System"><code class="docutils literal notranslate"><span class="pre">JRS_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.Metrics">ratingsystems.Metrics module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Metrics.GMeanLikelihood"><code class="docutils literal notranslate"><span class="pre">GMeanLikelihood</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Metrics.GMeanLikelihood_Log_Odds"><code class="docutils literal notranslate"><span class="pre">GMeanLikelihood_Log_Odds</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Metrics.InformationPreempted"><code class="docutils literal notranslate"><span class="pre">InformationPreempted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Metrics.PercentInformationPreempted"><code class="docutils literal notranslate"><span class="pre">PercentInformationPreempted</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.Metrics.RMS_Score_Error"><code class="docutils literal notranslate"><span class="pre">RMS_Score_Error</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.OpenSkill">ratingsystems.OpenSkill module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.OpenSkill.OpenSkill_Rating"><code class="docutils literal notranslate"><span class="pre">OpenSkill_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.OpenSkill.OpenSkill_System"><code class="docutils literal notranslate"><span class="pre">OpenSkill_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.RatingSystem">ratingsystems.RatingSystem module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.RatingSystem.InteractionGroup"><code class="docutils literal notranslate"><span class="pre">InteractionGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.RatingSystem.Participant"><code class="docutils literal notranslate"><span class="pre">Participant</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.RatingSystem.ParticipantGroup"><code class="docutils literal notranslate"><span class="pre">ParticipantGroup</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.RatingSystem.Rating"><code class="docutils literal notranslate"><span class="pre">Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem"><code class="docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems.TrueSkill">ratingsystems.TrueSkill module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.TrueSkill.TrueSkill_Rating"><code class="docutils literal notranslate"><span class="pre">TrueSkill_Rating</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ratingsystems.TrueSkill.TrueSkill_System"><code class="docutils literal notranslate"><span class="pre">TrueSkill_System</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-ratingsystems">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ratingsystems</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">ratingsystems</a></li>
+      <li class="breadcrumb-item active">ratingsystems package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/ratingsystems.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ratingsystems-package">
+<h1>ratingsystems package<a class="headerlink" href="#ratingsystems-package" title="Link to this heading"></a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
+</section>
+<section id="module-ratingsystems.Elo">
+<span id="ratingsystems-elo-module"></span><h2>ratingsystems.Elo module<a class="headerlink" href="#module-ratingsystems.Elo" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Elo.Elo_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Elo.</span></span><span class="sig-name descname"><span class="pre">Elo_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Elo.Elo_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Elo.Elo_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Elo.</span></span><span class="sig-name descname"><span class="pre">Elo_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1200</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Elo.Elo_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>The rating system created by Arpad Elo in the 1960s.</p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Elo_rating_system">https://en.wikipedia.org/wiki/Elo_rating_system</a></p>
+<p>Here it was extended to rate players within teams, allow multi-team game formats, 
+and predict the probability of draws.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_rating</strong> (<em>float</em>) – Rating given to new players.</p></li>
+<li><p><strong>k</strong> (<em>float</em>) – K factor used to calculate rating updates.</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Margin used to predict draws. Can be thought of as the 
+rating of a player that plays against every team (and if it wins it’s a draw).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.Elo.Elo_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Elo.Elo_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.Glicko">
+<span id="ratingsystems-glicko-module"></span><h2>ratingsystems.Glicko module<a class="headerlink" href="#module-ratingsystems.Glicko" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Glicko.Glicko_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Glicko.</span></span><span class="sig-name descname"><span class="pre">Glicko_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_RD</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_sqr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_rating</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko.Glicko_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.Glicko.Glicko_Rating.RD">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RD</span></span><a class="headerlink" href="#ratingsystems.Glicko.Glicko_Rating.RD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Glicko.Glicko_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Glicko.</span></span><span class="sig-name descname"><span class="pre">Glicko_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1500</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_RD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">350</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_rating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko.Glicko_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>The rating system created by Mark Glickman in the 1990s.</p>
+<p>It builds on Elo by accounting for measurement uncertainty.</p>
+<p><a class="reference external" href="http://www.glicko.net/glicko.html">http://www.glicko.net/glicko.html</a></p>
+<p>Here it was extended to rate players within teams, allow multi-team game formats, 
+and predict the probability of draws.</p>
+<p>That said, the implementation in this package doesn’t perform very well since 
+the ideal rating should include 5-10 games and here ratings are updated after 
+every game.</p>
+<p>As an attempt to compensate for this, two “k” parameters were added that scale the 
+updates in rating and RD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_rating</strong> (<em>float</em>) – Rating given to new players.</p></li>
+<li><p><strong>init_RD</strong> (<em>float</em>) – RD given to new players.</p></li>
+<li><p><strong>c</strong> (<em>float</em>) – Increase in uncertainty between games.</p></li>
+<li><p><strong>k_rating</strong> (<em>float</em>) – K factor that scales the rating updates.</p></li>
+<li><p><strong>k_var</strong> (<em>float</em>) – K factor that scales the RD updates (more accurately, the 
+variance updates).</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Margin used to predict draws. Can be thought of as the 
+rating of a player that plays against every team (and if it wins it’s a draw).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.Glicko.Glicko_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko.Glicko_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.Glicko2">
+<span id="ratingsystems-glicko2-module"></span><h2>ratingsystems.Glicko2 module<a class="headerlink" href="#module-ratingsystems.Glicko2" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Glicko2.Glicko2_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Glicko2.</span></span><span class="sig-name descname"><span class="pre">Glicko2_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_RD</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_rating</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_var</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko2.Glicko2_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.Glicko2.Glicko2_Rating.RD">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">RD</span></span><a class="headerlink" href="#ratingsystems.Glicko2.Glicko2_Rating.RD" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.Glicko2.Glicko2_Rating.sigma">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sigma</span></span><a class="headerlink" href="#ratingsystems.Glicko2.Glicko2_Rating.sigma" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Glicko2.Glicko2_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Glicko2.</span></span><span class="sig-name descname"><span class="pre">Glicko2_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_rating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_RD</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.06</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_rating</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_var</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko2.Glicko2_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>The rating system created by Mark Glickman in the 2000s.</p>
+<p>It builds on Glicko by varying the rate at which RDs decrease over time.</p>
+<p><a class="reference external" href="http://www.glicko.net/glicko.html">http://www.glicko.net/glicko.html</a></p>
+<p>Here it was extended to rate players within teams, allow multi-team game formats, 
+and predict the probability of draws.</p>
+<p>That said, the implementation in this package doesn’t perform very well since 
+the ideal rating should include 5-10 games and here ratings are updated after 
+every game.</p>
+<p>As an attempt to compensate for this, two “k” parameters were added that scale the 
+updates in rating and RD.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_rating</strong> (<em>float</em>) – Rating given to new players.</p></li>
+<li><p><strong>init_RD</strong> (<em>float</em>) – RD given to new players.</p></li>
+<li><p><strong>init_sigma</strong> (<em>float</em>) – Volatility given to new players.</p></li>
+<li><p><strong>tau</strong> (<em>float</em>) – Constraint on how much volatility is allowed to change per game.</p></li>
+<li><p><strong>k_rating</strong> (<em>float</em>) – K factor that scales the rating updates.</p></li>
+<li><p><strong>k_var</strong> (<em>float</em>) – K factor that scales the RD updates (more accurately, the 
+variance updates).</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Margin used to predict draws. Can be thought of as the 
+rating of a player that plays against every team (and if it wins it’s a draw).</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.Glicko2.Glicko2_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Glicko2.Glicko2_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.JRS">
+<span id="ratingsystems-jrs-module"></span><h2>ratingsystems.JRS module<a class="headerlink" href="#module-ratingsystems.JRS" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.JRS.</span></span><span class="sig-name descname"><span class="pre">JRS_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_lnvar</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic_start</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_psi</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_decay</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.J_Consistency">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">J_Consistency</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.J_Consistency" title="Link to this definition"></a></dt>
+<dd><p>Base 2 log of the square root of performance precision adjusted for rating drifts.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.J_Skill">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">J_Skill</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.J_Skill" title="Link to this definition"></a></dt>
+<dd><p>Average performance adjusted for rating drifts.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.J_Uncertainty">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">J_Uncertainty</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.J_Uncertainty" title="Link to this definition"></a></dt>
+<dd><p>Same as psi.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.J_XE">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">J_XE</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.J_XE" title="Link to this definition"></a></dt>
+<dd><p>Probability of outperforming the average active participant.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.lnvar">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">lnvar</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.lnvar" title="Link to this definition"></a></dt>
+<dd><p>Natural log of the performance variance.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.psi">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">psi</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.psi" title="Link to this definition"></a></dt>
+<dd><p>Current step size multiplier.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_Rating.sigma">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sigma</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_Rating.sigma" title="Link to this definition"></a></dt>
+<dd><p>Performance standard deviation.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.JRS.</span></span><span class="sig-name descname"><span class="pre">JRS_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">k_lnvar</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">final_psi</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.5</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">psi_decay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.05</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">avg_decay</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.01</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dynamic_start</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">[]</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.JRS.JRS_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>The rating system created by Jayensee in 2024.</p>
+<p>It uses gradient descent to 
+estimate both the average and variance of the performance exhibited by rated
+participants. The step size decreases with the number of games player by the 
+participant.</p>
+<p>Ratings are continuously adjusted such that the average active participant has 
+a J-Skill of 0 and J-Consistency of 1 (to avoid the ratings drifting over time).</p>
+<p>New players have their initial average performance set to the average of the rated 
+participants in their first match.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_mu</strong> (<em>float</em>) – Initial performance average for new participants when none of the 
+groups in dynamic_start are present in the match.</p></li>
+<li><p><strong>init_sigma</strong> (<em>float</em>) – Initial performance standard deviation for new participants.</p></li>
+<li><p><strong>k_mu</strong> (<em>float</em>) – Initial step size for updates to the performance average.</p></li>
+<li><p><strong>k_lnvar</strong> (<em>float</em>) – Initial step size for updates to the log of the performance variance.</p></li>
+<li><p><strong>final_psi</strong> (<em>float</em>) – Multiplier for the step size of a participant with infinite games.</p></li>
+<li><p><strong>psi_decay</strong> (<em>float</em>) – Rate at which the step size decays.</p></li>
+<li><p><strong>avg_decay</strong> (<em>float</em>) – Rate at which the estimation of the average rating changes.</p></li>
+<li><p><strong>dynamic_start</strong> (<em>list</em><em>[</em><em>str</em><em>]</em>) – List of groups to include when initializing ratings.</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Minimum performance difference required for a victory.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.JRS.JRS_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.JRS.JRS_System.adjusted_draw_margin">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">adjusted_draw_margin</span></span><a class="headerlink" href="#ratingsystems.JRS.JRS_System.adjusted_draw_margin" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.Metrics">
+<span id="ratingsystems-metrics-module"></span><h2>ratingsystems.Metrics module<a class="headerlink" href="#module-ratingsystems.Metrics" title="Link to this heading"></a></h2>
+<p>The Metrics module contains all of the metric classes that can be used with the rating systems.</p>
+<p>Every metric class has an error attribute that can be used as the loss for minimization.</p>
+<p>Note: every rating system is assumed to predict draw probabilities.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Metrics.GMeanLikelihood">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Metrics.</span></span><span class="sig-name descname"><span class="pre">GMeanLikelihood</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GMeanLikelihood'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Metrics.GMeanLikelihood" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The geometric mean of the likelihood.</p>
+<p>Can be thought of as the likelihood for each match.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Metrics.GMeanLikelihood_Log_Odds">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Metrics.</span></span><span class="sig-name descname"><span class="pre">GMeanLikelihood_Log_Odds</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'GMeanLikelihood_Log_Odds'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Metrics.GMeanLikelihood_Log_Odds" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.Metrics.GMeanLikelihood" title="ratingsystems.Metrics.GMeanLikelihood"><code class="xref py py-class docutils literal notranslate"><span class="pre">GMeanLikelihood</span></code></a></p>
+<p>Log-odds of the geometric mean of the likelihood.</p>
+<p>Transforms the geometric mean of the likelihood to have no upper or lower bound.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Metrics.InformationPreempted">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Metrics.</span></span><span class="sig-name descname"><span class="pre">InformationPreempted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'InformationPreempted'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Metrics.InformationPreempted" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>The information content not preempted by the system for each head to head match 
+is given by the average negative log likelihood of its predictions.</p>
+<p>By subtracting this amount from the theoretical maximum information limit of 1 
+trit/bit we get the average information the system already had before knowing the 
+outcome of each match.</p>
+<p>The unit used is the bit.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Metrics.PercentInformationPreempted">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Metrics.</span></span><span class="sig-name descname"><span class="pre">PercentInformationPreempted</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'PercentInformationPreempted'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Metrics.PercentInformationPreempted" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Since every game is split into a series of head to head matches, there are 3 
+possible outcomes for each of these: win, draw, or loss (two if draws aren’t possible).</p>
+<p>This means that each outcome can carry up to 1 trit/bit of information.</p>
+<p>The information preempted by the system is divided by the maximum theoretical 
+information (1 trit/bit) and multiplied by 100 to get the percentage of this 
+maximum that the system preempted.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.Metrics.RMS_Score_Error">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.Metrics.</span></span><span class="sig-name descname"><span class="pre">RMS_Score_Error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'RMS_Score_Error'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.Metrics.RMS_Score_Error" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Root mean square error of the score.</p>
+<p>The score is defined as 1 for a win, 0.5 for a draw, 0 for a loss.</p>
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.OpenSkill">
+<span id="ratingsystems-openskill-module"></span><h2>ratingsystems.OpenSkill module<a class="headerlink" href="#module-ratingsystems.OpenSkill" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.OpenSkill.OpenSkill_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.OpenSkill.</span></span><span class="sig-name descname"><span class="pre">OpenSkill_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.OpenSkill.OpenSkill_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">ThurstoneMostellerFullRating</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.OpenSkill.OpenSkill_Rating.std">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std</span></span><a class="headerlink" href="#ratingsystems.OpenSkill.OpenSkill_Rating.std" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.OpenSkill.OpenSkill_Rating.var">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">var</span></span><a class="headerlink" href="#ratingsystems.OpenSkill.OpenSkill_Rating.var" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.OpenSkill.OpenSkill_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.OpenSkill.</span></span><span class="sig-name descname"><span class="pre">OpenSkill_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.083</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">kappa</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0001</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.OpenSkill.OpenSkill_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>An open source system developed as an alternative to TrueSkill.</p>
+<p>It functions very similarly to TrueSkill but without patented mechanisms 
+(mainly the factor graphs).</p>
+<p><a class="reference external" href="https://openskill.me/en/stable/">https://openskill.me/en/stable/</a></p>
+<p>As with TrueSkill, this implementation doesn’t doesn’t fully support rating groups 
+as well as repeated participants on different teams or 0-weight participants.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_mu</strong> (<em>float</em>) – Initial performance average for new participants.</p></li>
+<li><p><strong>init_sigma</strong> (<em>float</em>) – Initial measurement uncertainty.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – Performance standard deviation of all participants.</p></li>
+<li><p><strong>tau</strong> (<em>float</em>) – Dynamic factor which accounts for change in performance over time.</p></li>
+<li><p><strong>kappa</strong> (<em>float</em>) – A very small number to limit how low the standards deviations are allowed to fall.</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Minimum performance difference required for a victory.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.OpenSkill.OpenSkill_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.OpenSkill.OpenSkill_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.RatingSystem">
+<span id="ratingsystems-ratingsystem-module"></span><h2>ratingsystems.RatingSystem module<a class="headerlink" href="#module-ratingsystems.RatingSystem" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.InteractionGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.RatingSystem.</span></span><span class="sig-name descname"><span class="pre">InteractionGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group1_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group2_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_team</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rating_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">group_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.InteractionGroup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.ParticipantGroup" title="ratingsystems.RatingSystem.ParticipantGroup"><code class="xref py py-class docutils literal notranslate"><span class="pre">ParticipantGroup</span></code></a></p>
+<p>This is used for groups consisting of interactions between participants.
+Mostly the same as ParticipantGroup.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.InteractionGroup.create_participant">
+<span class="sig-name descname"><span class="pre">create_participant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.InteractionGroup.create_participant" title="Link to this definition"></a></dt>
+<dd><p>Creates a participant with the given name.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.Participant">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.RatingSystem.</span></span><span class="sig-name descname"><span class="pre">Participant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rating_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.Participant" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the class used for every participant (regular or interaction).</p>
+<p>It shouldn’t need to be extended, and ParticipantGroup objects should only 
+be created through the methods in the RatingSystem class.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.RatingSystem.</span></span><span class="sig-name descname"><span class="pre">ParticipantGroup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">system</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rating_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">group_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is used for regular participant groups.</p>
+<p>It shouldn’t need to be extended, and ParticipantGroup objects should only 
+be created through the methods in the RatingSystem class.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup.create_participant">
+<span class="sig-name descname"><span class="pre">create_participant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup.create_participant" title="Link to this definition"></a></dt>
+<dd><p>Creates a participant with the given name.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup.print_participants">
+<span class="sig-name descname"><span class="pre">print_participants</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">prefix</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup.print_participants" title="Link to this definition"></a></dt>
+<dd><p>Prints the ratings of participants in the group to stdout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup.to_clipboard">
+<span class="sig-name descname"><span class="pre">to_clipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">excel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup.to_clipboard" title="Link to this definition"></a></dt>
+<dd><p>Copies a table with the ratings of participants in the group to the clipboard.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup.to_csv">
+<span class="sig-name descname"><span class="pre">to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup.to_csv" title="Link to this definition"></a></dt>
+<dd><p>Creates a csv string with the ratings of participants in the group.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.ParticipantGroup.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.ParticipantGroup.to_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Creates a pandas DataFrame with the ratings of participants in the group.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.RatingSystem.</span></span><span class="sig-name descname"><span class="pre">Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">rating_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the base Rating class that needs to be extended for every rating system.</p>
+<p>Rating objects are created by the Participant class and have their parent 
+Participant, ParticipantGroup, and System objects automatically added as attributes.</p>
+<p>The recent_partials attribute is also automatically updated and keeps track of the 
+weights associated with the rating in the current game (it’s a dictionary with 
+teamind: weight pairs for every team that the Participant is a part of).</p>
+<p>Ratings have a __hash__ method so they can be used as keys in dictionaries.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>rating_params</strong> (<em>dict</em>) – Keyword parameters used by the Rating.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.RatingSystem.</span></span><span class="sig-name descname"><span class="pre">RatingSystem</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rating_class</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">default_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This is the base class every rating system inherits from.
+It includes all the core methods and attributes that are used by most 
+(if not all) systems.</p>
+<p>It’s not an actual rating system in itself, it only exists to be inherited.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>rating_class</strong> (<a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><em>Rating</em></a>) – The rating class used by the system. Every system 
+implemented is expected to have its own rating class.</p></li>
+<li><p><strong>default_params</strong> (<em>dict</em>) – The default parameters for new ratings. These get 
+passed onto the rating objects when they’re created, so make sure the rating 
+class accepts them.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.add_games">
+<span class="sig-name descname"><span class="pre">add_games</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">games</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.add_games" title="Link to this definition"></a></dt>
+<dd><p>Calls the add_game method for every game in a list.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>games</strong> (<em>list</em><em>[</em><em>dict</em><em>]</em>) – List of dictionaries with game data.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.add_metric">
+<span class="sig-name descname"><span class="pre">add_metric</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.add_metric" title="Link to this definition"></a></dt>
+<dd><p>Adds a metric to the rating system.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>metric</strong> (<em>Metric</em>) – Metric object (see Metrics module).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.calc_prediction_matrix">
+<span class="sig-name descname"><span class="pre">calc_prediction_matrix</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game_full</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">h2h_ratings</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.calc_prediction_matrix" title="Link to this definition"></a></dt>
+<dd><p>Calculates the predictions for a given game.</p>
+<p>Returns a square matrix with the [win, draw, loss] probabilities at of 
+team i vs team j at (i,j).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>game_full</strong> (<em>dict</em>) – Dictionary with the data of a single game (including interactions).</p></li>
+<li><p><strong>h2h_ratings</strong> (<em>list</em><em>[</em><em>list</em><em>[</em><a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><em>Rating</em></a><em>]</em><em>]</em>) – Nested lists (i, j) with the ratings of team i vs team j.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Prediction matrix.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>numpy.ndarray</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.group_to_clipboard">
+<span class="sig-name descname"><span class="pre">group_to_clipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.group_to_clipboard" title="Link to this definition"></a></dt>
+<dd><p>Copies the ratings of the specified group to the clipboard, formatted as 
+a tsv (to paste into a spreadsheet).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>group_name</strong> (<em>str</em>) – Name of the rating group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.interaction_to_clipboard">
+<span class="sig-name descname"><span class="pre">interaction_to_clipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inter_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.interaction_to_clipboard" title="Link to this definition"></a></dt>
+<dd><p>Copies the ratings of the specified interaction group to the clipboard, 
+formatted as a tsv (to paste into a spreadsheet).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>inter_name</strong> (<em>str</em>) – Name of the interaction group.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.print_metrics">
+<span class="sig-name descname"><span class="pre">print_metrics</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">metric_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.print_metrics" title="Link to this definition"></a></dt>
+<dd><p>Prints all metrics in the system; alternatively a list of metric names 
+can be specified.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>metric_names</strong> (<em>list</em><em>[</em><em>str</em><em>]</em><em>, </em><em>Optional</em>) – List with the names of metrics to print, if None 
+then every metric is printed.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.print_participants">
+<span class="sig-name descname"><span class="pre">print_participants</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.print_participants" title="Link to this definition"></a></dt>
+<dd><p>Prints the ratings of all participants to stdout.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.set_group">
+<span class="sig-name descname"><span class="pre">set_group</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">override_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.set_group" title="Link to this definition"></a></dt>
+<dd><p>Creates a new rating group and sets its rating params. If the group 
+already exists it just sets the rating params.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group_name</strong> (<em>dict</em>) – Name of the rating group.</p></li>
+<li><p><strong>override_params</strong> – The rating parameters of the group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.set_interaction">
+<span class="sig-name descname"><span class="pre">set_interaction</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">group1_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">group2_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">same_team</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">override_params</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.set_interaction" title="Link to this definition"></a></dt>
+<dd><p>Creates a new interaction rating group of the given groups and sets its 
+rating params. If the group already exists it just sets the rating params.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>group1_name</strong> (<em>str</em>) – The name of the first group.</p></li>
+<li><p><strong>group2_name</strong> (<em>str</em>) – The name of the second group.</p></li>
+<li><p><strong>same_team</strong> (<em>bool</em>) – True if the interaction consists of ally duos or 
+matchups with opponents.</p></li>
+<li><p><strong>override_params</strong> – The rating parameters of the group.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.to_clipboard">
+<span class="sig-name descname"><span class="pre">to_clipboard</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_interaction_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">excel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.to_clipboard" title="Link to this definition"></a></dt>
+<dd><p>Copies tables with participant ratings to the clipboard (to paste in a spreadsheet).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include_groups</strong> (<em>bool</em>) – Whether to include the regular groups in the DataFrame.</p></li>
+<li><p><strong>include_interaction_groups</strong> (<em>bool</em>) – Whether to include the interaction groups in the DataFrame.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Keyword arguments to pass to pandas.DataFrame.to_clipboard</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Csv string with participant ratings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.to_csv">
+<span class="sig-name descname"><span class="pre">to_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_interaction_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.to_csv" title="Link to this definition"></a></dt>
+<dd><p>Creates a csv string with participant ratings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include_groups</strong> (<em>bool</em>) – Whether to include the regular groups in the DataFrame.</p></li>
+<li><p><strong>include_interaction_groups</strong> (<em>bool</em>) – Whether to include the interaction groups in the DataFrame.</p></li>
+<li><p><strong>kwargs</strong> (<em>dict</em>) – Keyword arguments to pass to pandas.DataFrame.to_csv</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Csv string with participant ratings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.RatingSystem.RatingSystem.to_dataframe">
+<span class="sig-name descname"><span class="pre">to_dataframe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">include_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">include_interaction_groups</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.RatingSystem.RatingSystem.to_dataframe" title="Link to this definition"></a></dt>
+<dd><p>Creates a pandas DataFrame with participant ratings.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>include_groups</strong> (<em>bool</em>) – Whether to include the regular groups in the DataFrame.</p></li>
+<li><p><strong>include_interaction_groups</strong> (<em>bool</em>) – Whether to include the interaction groups in the DataFrame.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>pandas DataFrame with participant ratings.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>pandas.DataFrame</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems.TrueSkill">
+<span id="ratingsystems-trueskill-module"></span><h2>ratingsystems.TrueSkill module<a class="headerlink" href="#module-ratingsystems.TrueSkill" title="Link to this heading"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_Rating">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.TrueSkill.</span></span><span class="sig-name descname"><span class="pre">TrueSkill_Rating</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_mu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_Rating" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.Rating" title="ratingsystems.RatingSystem.Rating"><code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></a>, <code class="xref py py-class docutils literal notranslate"><span class="pre">Rating</span></code></p>
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_Rating.mu">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">mu</span></span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_Rating.mu" title="Link to this definition"></a></dt>
+<dd><p>A property which returns the mean.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_Rating.sigma">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sigma</span></span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_Rating.sigma" title="Link to this definition"></a></dt>
+<dd><p>A property which returns the the square root of the variance.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_Rating.std">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">std</span></span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_Rating.std" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_Rating.var">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">var</span></span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_Rating.var" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_System">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">ratingsystems.TrueSkill.</span></span><span class="sig-name descname"><span class="pre">TrueSkill_System</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">init_mu</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">25</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">init_sigma</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">8.3</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">beta</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4.2</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tau</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.083</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">draw_margin</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">_</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_System" title="Link to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="#ratingsystems.RatingSystem.RatingSystem" title="ratingsystems.RatingSystem.RatingSystem"><code class="xref py py-class docutils literal notranslate"><span class="pre">RatingSystem</span></code></a></p>
+<p>The rating system created by Microsoft in 2005.</p>
+<p>It models matches using factor graphs and uses Gaussian density filtering to 
+estimate the parameters of the graphs. Each rating consists of the average 
+performance and the measurement uncertainty, every player is assumed to have the 
+same performance standard deviation.</p>
+<p>It extended the core principles behind Elo to work for multi-player teams, multi-team games,
+and to predict draw probabilities.</p>
+<p><a class="reference external" href="https://www.microsoft.com/en-us/research/publication/trueskilltm-a-bayesian-skill-rating-system/">https://www.microsoft.com/en-us/research/publication/trueskilltm-a-bayesian-skill-rating-system/</a></p>
+<p>This package uses the implementation by Heungsub Lee and doesn’t fully support 
+rating groups as well as repeated participants on different teams or 0-weight participants.</p>
+<p>Note: Microsoft has a patent on using factor graphs for rating systems, so 
+make sure you’re legally allowed to use this system before using it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>init_mu</strong> (<em>float</em>) – Initial performance average for new participants.</p></li>
+<li><p><strong>init_sigma</strong> (<em>float</em>) – Initial measurement uncertainty.</p></li>
+<li><p><strong>beta</strong> (<em>float</em>) – Performance standard deviation of all participants.</p></li>
+<li><p><strong>tau</strong> (<em>float</em>) – Dynamic factor which accounts for change in performance over time.</p></li>
+<li><p><strong>draw_margin</strong> (<em>float</em>) – Minimum performance difference required for a victory.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="ratingsystems.TrueSkill.TrueSkill_System.add_game">
+<span class="sig-name descname"><span class="pre">add_game</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">game</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#ratingsystems.TrueSkill.TrueSkill_System.add_game" title="Link to this definition"></a></dt>
+<dd><p>All of the systems implemented attempt to standardize the game dict provided, 
+but to be safe it’s recommended to follow the standard format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="s2">&quot;Teams&quot;</span><span class="p">:[{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p1name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p2name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p3name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p4name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+    <span class="p">},</span> 
+    <span class="p">{</span>
+    <span class="s2">&quot;group1name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p5name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p6name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">},</span> 
+    <span class="s2">&quot;group2name&quot;</span><span class="p">:{</span>
+        <span class="s2">&quot;p7name&quot;</span><span class="p">:</span><span class="n">weight</span><span class="p">,</span> 
+        <span class="s2">&quot;p9name&quot;</span><span class="p">:</span><span class="n">weight</span>
+    <span class="p">}</span>
+<span class="p">},</span> 
+<span class="o">...</span><span class="p">],</span> 
+<span class="s2">&quot;Results&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="o">...</span><span class="p">],</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>More keys are allowed, although as of now the only system using any beyond 
+these ones are Glicko and Glicko2.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>game</strong> (<em>dict</em>) – Dictionary with the data of a single game.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-ratingsystems">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-ratingsystems" title="Link to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="ratingsystems" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Jayensee.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
