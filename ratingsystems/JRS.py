@@ -55,7 +55,6 @@ class JRS_System(RatingSystem):
         self.avg_mu = init_mu
         self.avg_lnvar = 2*np.log(init_sigma)
         self.avg_decay = avg_decay
-        self.add_metric(GMeanLikelihood("GMeanLikelihood"))
         self.add_metric(InformationPreempted("InformationPreempted", draw_margin=draw_margin))
 
     def add_game(self, game):  

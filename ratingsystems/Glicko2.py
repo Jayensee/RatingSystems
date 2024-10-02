@@ -14,7 +14,7 @@ def _g(var):
 def _E(rating, var, g=None):
     if g is None:
         g = _g(var)
-    return (1 + 10**(-g * rating / 400)) ** -1
+    return (1 + np.e**(-g * rating)) ** -1
 
 def _S(rating, var, draw_margin, g=None):
     if g is None:
